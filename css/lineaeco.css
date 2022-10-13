@@ -39,6 +39,7 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
+
 .logo {
   max-block-size: 80px;
   inline-size: 100%;
@@ -122,123 +123,53 @@ nav .bar a:hover {
   object-fit: contain;
 }
 
-.category {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  /* gap: 10px; */
+.product {
+  max-inline-size: 1100px;
+  margin: 0 auto;
 }
 
-.category h1 {
+.product h1 {
   font-size: 36px;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--green);
   margin: 30px 0;
+  text-align: center;
 }
 
-
-.category-container {
-  min-block-size: 200px;
-  inline-size: 100%;
-  display: flex;
-  /* pendiente de saber si el gap afecta el scroll */
-  /* gap: 5px; */
-  padding: 40px 20px;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contein {
-  inline-size: 760px;
-  display: flex;
-  align-items: center;
-
-  justify-content: space-between;
-}
-
-.category-container img {
-  inline-size: 120px;
-  block-size: 120px;
-}
-
-.category-text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.texto {
   color: var(--white);
-}
-
-.category-text h2 {
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
-.armado {
-  background-color: #F18F52;
-}
-.extruidos {
-  background-color: var(--red);
-}
-.corte {
-  background-color: var(--purple);
-}
-.aseo {
-  background-color: var(--green-dark);
-}
-.eco {
-  background-color: var(--purple-dark);
-}
-
-.eco img {
-  inline-size: 120px;
-  block-size: 120px;
-}
-
-.button {
-  display: flex;
-  padding: 8px 5px;
-  block-size: 25px;
-  inline-size: 100px;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: var(--green);
   border-radius: 10px;
 }
 
-.button-armado {
-  background-color: var(--white);
-  color: var(--yellow);
+.products {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
-.button-extruidos {
-  background-color: var(--white);
-  color: var(--red);
-}
-.button-corte {
-  background-color: var(--white);
-  color: var(--purple);
-}
-.button-aseo {
-  background-color: var(--white);
-  color: var(--green-dark);
-}
-.button-eco {
-  background-color: var(--white);
-  color: var(--purple-dark);
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
 }
 
-.distributor {
-  min-block-size: 100px;
-  max-inline-size: 1100px;
-  margin-bottom: 30px;
+.products-container p {
+  text-align: center;
 }
 
-.distributor img {
-  max-block-size: 100%;
-  max-inline-size: 100%;
-  object-fit: contain;
+
+.products .products-container img {
+  inline-size: 250px;
+  block-size: 250px;
+  border-radius: 25px;
 }
 
 .space {
@@ -247,7 +178,6 @@ nav .bar a:hover {
   background-color: var(--purple);
   margin-bottom: 10px;
 }
-
 .information {
   display: flex;
   flex-direction: column;
@@ -290,28 +220,27 @@ nav .bar a:hover {
   font-size: 20px;
 }
 
-@media (min-width: 760px)  {
+@media (min-width: 760px) {
 
   nav .bar {
     flex-direction: row;
-  }
-
-  .category-container {
-    max-width: 1440px;
-    justify-content: center;
-  }
-
-  .category-container img {
-    inline-size: 200px;
-    block-size: 200px;
-  }
-  .category h1 {
-    font-size: 48px;
   }
   .covertura {
     display: flex;
     justify-content: center;
   }
+
+  .products {
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+
+  .products .products-container img {
+    inline-size: 320px;
+    block-size: 320px;
+  }
+
   .information {
     flex-direction: row;
     box-sizing: border-box;
@@ -319,9 +248,12 @@ nav .bar a:hover {
     justify-content: space-around;
     margin: 20px 0;
   }
+
   .networks {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 20px;
   }
+
 }
