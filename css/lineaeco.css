@@ -77,7 +77,6 @@ nav .bar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
   padding: 0;
   min-block-size: 30px;
   background-color: var(--primary);
@@ -126,6 +125,10 @@ nav .bar a:hover {
 .product {
   max-inline-size: 1100px;
   margin: 0 auto;
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product h1 {
@@ -139,8 +142,10 @@ nav .bar a:hover {
 .texto {
   color: var(--white);
   font-size: 16px;
+  max-inline-size: 700px;
   text-align: center;
   padding: 10px 20px;
+  box-sizing: border-box;
   background-color: var(--green);
   border-radius: 10px;
 }
@@ -150,7 +155,8 @@ nav .bar a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
+  inline-size: 100%;
 }
 
 .products-container {
@@ -232,13 +238,13 @@ nav .bar a:hover {
 
   .products {
     flex-direction: row;
-    justify-content: center;
-    gap: 120px;
+    justify-content: space-between;
+    max-inline-size: 700px;
   }
 
   .products .products-container img {
-    inline-size: 320px;
-    block-size: 320px;
+    inline-size: 280px;
+    block-size: 280px;
   }
 
   .information {
